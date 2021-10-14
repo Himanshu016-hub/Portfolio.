@@ -443,7 +443,7 @@ section .title::after {
   width: 75%;
 }
 
-.skills-content .right .android-development ::before {
+.skills-content .right .android::before {
   width: 80%;
 }
 

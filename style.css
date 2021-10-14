@@ -428,22 +428,22 @@ section .title::after {
 }
 
 .skills-content .right .html::before {
-  width: 85%;
+  width: 80%;
 }
 
 .skills-content .right .css::before {
-  width: 70%;
+  width: 75%;
 }
 
 .skills-content .right .js::before {
+  width: 65%;
+}
+
+.skills-content .right .java::before {
   width: 75%;
 }
 
-.skills-content .right .php::before {
-  width: 75%;
-}
-
-.skills-content .right .mysql::before {
+.skills-content .right .android-development ::before {
   width: 80%;
 }
 

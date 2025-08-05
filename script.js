@@ -35,14 +35,14 @@ $(document).ready(function () {
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Software Engineer", "Developer", "Android Developer", "Web Developer", "Freelancer"],
+        strings: ["Full Stack Developer","Software Development Engineer", "Android Developer", "Web Developer", "Freelancer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Software Engineer", "Developer", "Android Developer", "Web Developer", "Freelancer"],
+        strings: ["Full Stack Developer","Software Development Engineer", "Android Developer", "Web Developer", "Freelancer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -70,4 +70,5 @@ $(document).ready(function () {
             }
         }
     });
+
 });

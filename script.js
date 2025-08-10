@@ -1,59 +1,66 @@
+// Ensure code runs when DOM is fully loaded
 $(document).ready(function () {
+
+    // --- Window scroll handler ---
     $(window).scroll(function () {
-        // sticky navbar on scroll script
-        if (this.scrollY > 20) {
+        // Sticky navbar on scroll
+        if ($(this).scrollTop() > 20) {
             $('.navbar').addClass("sticky");
         } else {
             $('.navbar').removeClass("sticky");
         }
 
-        // scroll-up button show/hide script
-        if (this.scrollY > 500) {
+        // Show/hide scroll-up button
+        if ($(this).scrollTop() > 500) {
             $('.scroll-up-btn').addClass("show");
         } else {
             $('.scroll-up-btn').removeClass("show");
         }
     });
 
-    // slide-up script
+    // --- Scroll UP button click ---
     $('.scroll-up-btn').click(function () {
+        // Instantly scroll to top
         $('html').animate({ scrollTop: 0 });
-        // removing smooth scroll on slide-up button click
+        // Remove smooth scroll after slide-up button click
         $('html').css("scrollBehavior", "auto");
     });
 
+    // --- Smooth scroll for menu links ---
     $('.navbar .menu li a').click(function () {
-        // applying again smooth scroll on menu items click
+        // Re-enable smooth scrolling
         $('html').css("scrollBehavior", "smooth");
     });
 
-    // toggle menu/navbar script
+    // --- Mobile menu toggle ---
     $('.menu-btn').click(function () {
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
+        $('.navbar .menu').toggleClass("active");    // Show/hide navigation links
+        $('.menu-btn i').toggleClass("active");      // Animate hamburger icon
     });
 
-    // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["Full Stack Developer","Software Development Engineer", "Android Developer", "Web Developer", "Freelancer"],
+    // --- Typed.js animation for home/about titles ---
+    const typingOptions = {
+        strings: [
+            "Full Stack Developer",
+            "Software Development Engineer",
+            "Android Developer",
+            "Web Developer",
+            "Freelancer"
+        ],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
-    });
+    };
+    // Typing effect for main and about section
+    new Typed(".typing", typingOptions);
+    new Typed(".typing-2", typingOptions);
 
-    var typed = new Typed(".typing-2", {
-        strings: ["Full Stack Developer","Software Development Engineer", "Android Developer", "Web Developer", "Freelancer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    // owl carousel script
+    // --- Owl Carousel for projects (teams section) ---
     $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
         autoplay: true,
-        autoplayTimeOut: 2000,
+        autoplayTimeout: 2000,          // Correct key for Owl Carousel is 'autoplayTimeout'
         autoplayHoverPause: true,
         responsive: {
             0: {
